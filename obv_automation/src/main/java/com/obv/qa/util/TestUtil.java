@@ -64,12 +64,14 @@ public class TestUtil extends TestBase implements ITestListener, IRetryAnalyzer 
 
 	@Override
 	public void onTestFailure(ITestResult re) {
-		isFailed=true;
+		/* isFailed=true;
 		try {
 			SendEmail.NotifyFailure(re.getMethod().getMethodName(), re.getTestClass().getName());
 		} catch (EmailException e) {
 			throw new RuntimeException(e);
 		}
+		
+		*/
 		System.out.println("Entered onTestFailure");
 		//in below code, " DemoListener .driver" is used to get same driver from sample test class.
 		takeScreenshot(re.getMethod().getMethodName(), re.getTestClass().getName());
