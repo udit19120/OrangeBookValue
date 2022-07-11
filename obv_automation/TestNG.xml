@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Orange Book Value Application Test Automation Test Suite">
+
+    <listeners>
+        <listener class-name="com.obv.qa.util.RetryTransformer" />
+        <listener class-name="com.obv.qa.util.TestUtil" />
+        <listener class-name="com.obv.qa.util.ExtentReportNG" />
+    </listeners>
+
+
+    <test name="OBV App Test Cases">
+        <classes>
+            <class name="com.obv.qa.testcases.HomeTest"></class>
+            <class name="com.obv.qa.testcases.UsedBikePageTest"></class>
+            <class name="com.obv.qa.testcases.NewCarPageTest"></class>
+<!--            <class name="com.obv.qa.testcases.UserLoginPageTest"></class>-->
+
+        </classes>
+    </test>
+</suite>
